@@ -5,7 +5,6 @@
 //  Created by Qusic on 8/9/15.
 //  Copyright (c) 2015 Qusic. All rights reserved.
 //
-
 #import <AppKit/AppKit.h>
 
 NSString *PFTDeveloperDirectory(void);

@@ -29,7 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D2BABC6820E520B80048C20A /* InstrumentsAnalysisCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstrumentsAnalysisCore.framework; path = /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsAnalysisCore.framework; sourceTree = "<group>"; };
+		D2BABC6820E520B80048C20A /* InstrumentsAnalysisCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstrumentsAnalysisCore.framework; path = /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsAnalysisCore.framework; sourceTree = "<absolute>"; };
 		D2BABC6A20E520BF0048C20A /* InstrumentsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstrumentsKit.framework; path = /Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks/InstrumentsKit.framework; sourceTree = "<group>"; };
 		D2BABC6C20E521020048C20A /* DVTFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTFoundation.framework; path = /Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework; sourceTree = "<group>"; };
 		D2BABC6E20E5210C0048C20A /* DVTInstrumentsFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVTInstrumentsFoundation.framework; path = /Applications/Xcode.app/Contents/SharedFrameworks/DVTInstrumentsFoundation.framework; sourceTree = "<group>"; };
@@ -64,8 +64,8 @@
 				D2BABC6E20E5210C0048C20A /* DVTInstrumentsFoundation.framework */,
 				D2BABC7020E521160048C20A /* DVTInstrumentsUtilities.framework */,
 				FECBF4931B9D6CE500D653A7 /* InstrumentsPlugIn.framework */,
-				D2BABC6820E520B80048C20A /* InstrumentsAnalysisCore.framework */,
 				D2BABC6A20E520BF0048C20A /* InstrumentsKit.framework */,
+				D2BABC6820E520B80048C20A /* InstrumentsAnalysisCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -270,6 +270,10 @@
 		FECBF4871B9D577200D653A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/SharedFrameworks",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -277,6 +281,10 @@
 		FECBF4881B9D577200D653A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/SharedFrameworks",
+					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Applications/Instruments.app/Contents/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
